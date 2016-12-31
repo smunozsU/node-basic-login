@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login System</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    Welcome!
+
+    <% if (user) { %>
+      <p><%= user.username %></p>
+      <a href="/Profile">View profile</a>
+      <a href="/logout">Logout</a>
+  	<% } %>
+
+    <% if (!user) { %>
+      <br>
+      <a href="/login">Login</a>
+      <br>
+      <a href="/register">Register</a>
+  	<% } %>
+
+
+  </body>
+</html>
